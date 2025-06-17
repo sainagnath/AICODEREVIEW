@@ -20,7 +20,7 @@ function App() {
   const[review, setReview] = useState('');
 
   async function reviewCode(){
-    const response = await axios.post('https://aicodereview-backend.onrender.com',{code});
+    const response = await axios.post('https://aicodereview-backend.onrender.com/ai/get-review',{code});
     setReview(response.data);
   }
 
